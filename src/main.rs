@@ -40,10 +40,13 @@ fn main() {
 
     // Choose a number randomly
     let n = rng.gen_range(min..=max);
+
+    let mut attempts = 0;
     
     // do while (not the right number)
     loop {
         let choosen:i32 = ask_a_number(&format!("Choose a number between {min} and {max} : "));
+        attempts += 1;
 
         // Compare and tell the user
         if choosen < n {
@@ -52,6 +55,7 @@ fn main() {
             println!("TOO BIG !")
         } else {
             println!("Congrats ! It was : {n} !");
+            println!("It took you {attempts} attempt(s)...");
             break;
         }
     }
