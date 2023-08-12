@@ -2,7 +2,16 @@
 
 ## Purpose
 
-*This is my first Rust program.* I am using it to learn the language.
+**This is my first Rust program.** I am using it to learn the language.
+
+## Usage
+
+```bash
+git clone https://github.com/XNxa/Guessing_game.git
+cd Guessing_game
+cargo build
+cargo run
+```
 
 ## Description
 
