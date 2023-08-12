@@ -52,9 +52,9 @@ fn main() {
 
         // Compare and tell the user
         if choosen < n {
-            println!("too small...");
+            println!("too small...\n");
         } else if choosen > n {
-            println!("TOO BIG !")
+            println!("TOO BIG !\n")
         } else {
             println!("Congrats ! It was : {n} !");
             println!("It took you {attempts} attempt(s)...");
