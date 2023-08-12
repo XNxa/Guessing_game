@@ -1,6 +1,8 @@
 use rand::{thread_rng, Rng};
 use std::{io, str::FromStr, fmt::Display};
 
+type Number = i32;
+
 fn ask_a_number<T : FromStr>(msg: &str) -> T 
     where <T as FromStr>::Err: Display 
 {
@@ -27,8 +29,8 @@ fn main() {
     
     
     // Asking for min and max
-    let mut min:i32;
-    let mut max:i32;
+    let mut min:Number;
+    let mut max:Number;
     loop {
         min = ask_a_number("Please enter the min value : ");
         max = ask_a_number("Please enter the max value : ");
@@ -39,13 +41,13 @@ fn main() {
     }
 
     // Choose a number randomly
-    let n = rng.gen_range(min..=max);
+    let n:Number = rng.gen_range(min..=max);
 
     let mut attempts = 0;
     
     // do while (not the right number)
     loop {
-        let choosen:i32 = ask_a_number(&format!("Choose a number between {min} and {max} : "));
+        let choosen:Number = ask_a_number(&format!("Choose a number between {min} and {max} : "));
         attempts += 1;
 
         // Compare and tell the user
